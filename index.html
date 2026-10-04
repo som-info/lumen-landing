@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumen – Analytics that light up your product</title>
+    <meta name="description" content="Lumen is a privacy-first product analytics platform that turns raw events into clear, actionable insights." />
+    <meta name="theme-color" content="#7c5cff" />
+    <meta property="og:title" content="Lumen – Analytics that light up your product" />
+    <meta property="og:description" content="Privacy-first product analytics with real-time dashboards, funnels and AI insights." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Apply the saved theme before first paint to avoid a flash of the wrong theme -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem('lumen-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.classList.add('js');
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============================ HEADER ============================ -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#" class="logo" aria-label="Lumen home">
+          <img src="assets/favicon.svg" alt="" width="28" height="28" />
+          <span>Lumen</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Main navigation">
+          <ul class="nav__list">
+            <li><a href="#features" class="nav__link">Features</a></li>
+            <li><a href="#pricing" class="nav__link">Pricing</a></li>
+            <li><a href="#testimonials" class="nav__link">Customers</a></li>
+            <li><a href="#faq" class="nav__link">FAQ</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+          <a href="#pricing" class="btn btn--primary nav__cta">Start free trial</a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================ HERO ============================ -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content reveal">
+            <span class="eyebrow">✨ New: AI-powered insights</span>
+            <h1 class="hero__title">Analytics that <span class="gradient-text">light up</span> your product</h1>
+            <p class="hero__subtitle">
+              Lumen turns raw events into clear, actionable insights. Understand your users,
+              find drop-offs and ship features people love – without writing a single SQL query.
+            </p>
+            <div class="hero__actions">
+              <a href="#pricing" class="btn btn--primary btn--lg">Start free – 14 days</a>
+              <a href="#features" class="btn btn--ghost btn--lg">See how it works</a>
+            </div>
+            <p class="hero__note">No credit card required · Cancel anytime</p>
+          </div>
+
+          <!-- Decorative dashboard mock built with HTML/CSS -->
+          <div class="hero__visual reveal" aria-hidden="true">
+            <div class="mock">
+              <div class="mock__bar"><span></span><span></span><span></span></div>
+              <div class="mock__body">
+                <div class="mock__stats">
+                  <div class="mock__stat"><small>Active users</small><strong>24,891</strong><em class="up">▲ 12.4%</em></div>
+                  <div class="mock__stat"><small>Conversion</small><strong>4.62%</strong><em class="up">▲ 0.8%</em></div>
+                  <div class="mock__stat"><small>Churn</small><strong>1.9%</strong><em class="down">▼ 0.3%</em></div>
+                </div>
+                <div class="mock__chart">
+                  <span style="--h: 40%"></span><span style="--h: 55%"></span><span style="--h: 48%"></span>
+                  <span style="--h: 70%"></span><span style="--h: 62%"></span><span style="--h: 85%"></span>
+                  <span style="--h: 78%"></span><span style="--h: 92%"></span><span style="--h: 88%"></span>
+                  <span style="--h: 100%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container logos reveal">
+          <p>Trusted by fast-growing teams worldwide</p>
+          <ul class="logos__list">
+            <li>Northwind</li><li>Acme Co.</li><li>Globex</li><li>Initech</li><li>Umbrella</li><li>Hooli</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ FEATURES ============================ -->
+      <section class="section" id="features">
+        <div class="container">
+          <header class="section__header reveal">
+            <span class="eyebrow">Features</span>
+            <h2 class="section__title">Everything you need to understand your users</h2>
+            <p class="section__subtitle">Powerful analytics with a beautifully simple interface – set up in minutes.</p>
+          </header>
+
+          <div class="features">
+            <article class="feature reveal">
+              <div class="feature__icon">⚡</div>
+              <h3>Real-time dashboards</h3>
+              <p>Watch events stream in live and build custom dashboards with drag-and-drop widgets.</p>
+            </article>
+            <article class="feature reveal">
+              <div class="feature__icon">🎯</div>
+              <h3>Funnels &amp; retention</h3>
+              <p>Pinpoint exactly where users drop off and measure how many keep coming back.</p>
+            </article>
+            <article class="feature reveal">
+              <div class="feature__icon">🤖</div>
+              <h3>AI insights</h3>
+              <p>Ask questions in plain English and get instant charts, trends and anomaly alerts.</p>
+            </article>
+            <article class="feature reveal">
+              <div class="feature__icon">🔒</div>
+              <h3>Privacy first</h3>
+              <p>Cookie-less tracking, GDPR-ready by default and EU data residency available.</p>
+            </article>
+            <article class="feature reveal">
+              <div class="feature__icon">🔌</div>
+              <h3>100+ integrations</h3>
+              <p>Connect Stripe, HubSpot, Segment, Slack and more with a single click.</p>
+            </article>
+            <article class="feature reveal">
+              <div class="feature__icon">👥</div>
+              <h3>Built for teams</h3>
+              <p>Share reports, leave comments and control access with granular roles.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ PRICING ============================ -->
+      <section class="section section--alt" id="pricing">
+        <div class="container">
+          <header class="section__header reveal">
+            <span class="eyebrow">Pricing</span>
+            <h2 class="section__title">Simple, transparent pricing</h2>
+            <p class="section__subtitle">Start free, upgrade when you grow. Save 20% with yearly billing.</p>
+          </header>
+
+          <div class="billing-toggle reveal" role="group" aria-label="Billing period">
+            <span class="billing-toggle__label is-active" data-period-label="monthly">Monthly</span>
+            <button class="switch" id="billing-switch" type="button" role="switch" aria-checked="false" aria-label="Switch to yearly billing">
+              <span class="switch__thumb"></span>
+            </button>
+            <span class="billing-toggle__label" data-period-label="yearly">Yearly <span class="badge">-20%</span></span>
+          </div>
+
+          <!-- Prices are stored in data attributes and swapped by js/main.js -->
+          <div class="pricing">
+            <article class="plan reveal">
+              <h3 class="plan__name">Starter</h3>
+              <p class="plan__desc">For side projects and early-stage startups.</p>
+              <p class="plan__price">
+                <span class="plan__amount" data-monthly="0" data-yearly="0">$0</span>
+                <span class="plan__period">/ month</span>
+              </p>
+              <p class="plan__billed" data-billed>Free forever</p>
+              <ul class="plan__features">
+                <li>Up to 10k events / month</li>
+                <li>3 dashboards</li>
+                <li>7-day data history</li>
+                <li>Community support</li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost btn--block">Get started</a>
+            </article>
+
+            <article class="plan plan--featured reveal">
+              <span class="plan__tag">Most popular</span>
+              <h3 class="plan__name">Growth</h3>
+              <p class="plan__desc">For growing teams that need deeper insights.</p>
+              <p class="plan__price">
+                <span class="plan__amount" data-monthly="49" data-yearly="39">$49</span>
+                <span class="plan__period">/ month</span>
+              </p>
+              <p class="plan__billed" data-billed>Billed monthly</p>
+              <ul class="plan__features">
+                <li>Up to 1M events / month</li>
+                <li>Unlimited dashboards</li>
+                <li>Funnels &amp; retention</li>
+                <li>AI insights</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#contact" class="btn btn--primary btn--block">Start free trial</a>
+            </article>
+
+            <article class="plan reveal">
+              <h3 class="plan__name">Scale</h3>
+              <p class="plan__desc">For companies with advanced needs.</p>
+              <p class="plan__price">
+                <span class="plan__amount" data-monthly="149" data-yearly="119">$149</span>
+                <span class="plan__period">/ month</span>
+              </p>
+              <p class="plan__billed" data-billed>Billed monthly</p>
+              <ul class="plan__features">
+                <li>Unlimited events</li>
+                <li>SSO &amp; audit logs</li>
+                <li>EU data residency</li>
+                <li>Dedicated success manager</li>
+                <li>99.9% uptime SLA</li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost btn--block">Contact sales</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ TESTIMONIALS ============================ -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header class="section__header reveal">
+            <span class="eyebrow">Customers</span>
+            <h2 class="section__title">Loved by product teams</h2>
+          </header>
+
+          <div class="testimonials">
+            <figure class="testimonial reveal">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>“Lumen replaced three tools for us. Our PMs finally answer their own questions without waiting on the data team.”</blockquote>
+              <figcaption>
+                <img src="https://i.pravatar.cc/96?img=47" alt="" width="48" height="48" loading="lazy" />
+                <div><strong>Sarah Chen</strong><span>Head of Product, Northwind</span></div>
+              </figcaption>
+            </figure>
+            <figure class="testimonial reveal">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>“Setup took ten minutes. Within a week we found a checkout bug that was costing us 8% of conversions.”</blockquote>
+              <figcaption>
+                <img src="https://i.pravatar.cc/96?img=12" alt="" width="48" height="48" loading="lazy" />
+                <div><strong>Marcus Rivera</strong><span>CTO, Globex</span></div>
+              </figcaption>
+            </figure>
+            <figure class="testimonial reveal">
+              <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>“The AI insights feel like magic. I type a question and get a chart I can drop straight into our board deck.”</blockquote>
+              <figcaption>
+                <img src="https://i.pravatar.cc/96?img=32" alt="" width="48" height="48" loading="lazy" />
+                <div><strong>Elena Petrova</strong><span>Founder, Initech</span></div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ FAQ ============================ -->
+      <section class="section section--alt" id="faq">
+        <div class="container container--narrow">
+          <header class="section__header reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2 class="section__title">Frequently asked questions</h2>
+          </header>
+
+          <div class="faq reveal" id="faq-list">
+            <div class="faq__item">
+              <h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-1">How does the free trial work?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__answer" id="faq-1" role="region"><p>You get full access to the Growth plan for 14 days. No credit card is required, and you can downgrade to Starter at any time.</p></div>
+            </div>
+            <div class="faq__item">
+              <h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-2">Can I switch plans later?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__answer" id="faq-2" role="region"><p>Absolutely. Upgrade or downgrade whenever you like – changes are prorated automatically on your next invoice.</p></div>
+            </div>
+            <div class="faq__item">
+              <h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-3">Is my data secure?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__answer" id="faq-3" role="region"><p>Yes. Data is encrypted in transit and at rest, we are SOC 2 Type II compliant, and you can choose EU-only data storage.</p></div>
+            </div>
+            <div class="faq__item">
+              <h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-4">Do you offer discounts for non-profits?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__answer" id="faq-4" role="region"><p>We offer 50% off all paid plans for registered non-profits and educational institutions. Contact us to apply.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ CONTACT ============================ -->
+      <section class="section" id="contact">
+        <div class="container contact">
+          <div class="contact__intro reveal">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section__title">Let’s talk about your product</h2>
+            <p class="section__subtitle">Have a question or want a personalised demo? Send us a message and we’ll get back to you within one business day.</p>
+            <ul class="contact__list">
+              <li>📧 hello@lumen.example</li>
+              <li>📍 Remote-first, worldwide</li>
+            </ul>
+          </div>
+
+          <!-- Client-side validation only: this demo does not send data anywhere -->
+          <form class="form reveal" id="contact-form" novalidate>
+            <div class="form__row">
+              <div class="form__field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required minlength="2" />
+                <span class="form__error" aria-live="polite"></span>
+              </div>
+              <div class="form__field">
+                <label for="email">Work email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <span class="form__error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="company">Company <span class="optional">(optional)</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization" />
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required minlength="20"></textarea>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <label class="form__check">
+              <input type="checkbox" name="consent" id="consent" required />
+              <span>I agree to be contacted about Lumen.</span>
+            </label>
+            <span class="form__error" data-for="consent" aria-live="polite"></span>
+            <button class="btn btn--primary btn--block" type="submit">Send message</button>
+            <p class="form__success" id="form-success" role="status" hidden>✅ Thanks! Your message has been sent – we’ll be in touch soon.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a href="#" class="logo"><img src="assets/favicon.svg" alt="" width="24" height="24" /><span>Lumen</span></a>
+        <p>© <span id="year">2026</span> Lumen Inc. A fictional product · Designed &amp; built by Amir Namvar.</p>
+        <a href="#" class="back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
